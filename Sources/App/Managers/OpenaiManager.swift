@@ -44,3 +44,4 @@ class OpenAIManager {
         return response.choices.first?.message
     }
 }
+
