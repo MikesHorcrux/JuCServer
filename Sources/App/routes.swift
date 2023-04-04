@@ -26,5 +26,5 @@ func routes(_ app: Application) throws {
     let chatController = ChatController(openAIManager: openAIManager)
     try app.register(collection: chatController)
     
-    try app.register(collection: TodoController())
+    //try app.register(collection: TodoController())
 }
