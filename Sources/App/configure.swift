@@ -1,6 +1,6 @@
-import Fluent
-import FluentPostgresDriver
+
 import Vapor
+import FirebaseJWTMiddleware
 
 // configures your application
 public func configure(_ app: Application) throws {
@@ -18,5 +18,6 @@ public func configure(_ app: Application) throws {
     //app.migrations.add(CreateTodo())
 
     // register routes
+
     try routes(app)
 }

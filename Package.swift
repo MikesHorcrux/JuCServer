@@ -9,19 +9,18 @@ let package = Package(
     dependencies: [
         // 💧 A server-side Swift web framework.
         .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0"),
-        .package(url: "https://github.com/vapor/fluent.git", from: "4.0.0"),
-        .package(url: "https://github.com/vapor/fluent-postgres-driver.git", from: "2.0.0"),
         // 🧠 Open ai
-        .package(url: "https://github.com/dylanshine/openai-kit.git", from: "1.4.1")
+        .package(url: "https://github.com/dylanshine/openai-kit.git", from: "1.4.1"),
+        .package(url: "https://github.com/barisatamer/vapor-firebase-jwt-middleware.git", from: "1.0.0"),
+
     ],
     targets: [
         .target(
             name: "App",
             dependencies: [
-                .product(name: "Fluent", package: "fluent"),
-                .product(name: "FluentPostgresDriver", package: "fluent-postgres-driver"),
                 .product(name: "Vapor", package: "vapor"),
-                .product(name: "OpenAIKit", package: "openai-kit")
+                .product(name: "OpenAIKit", package: "openai-kit"),
+                .product(name: "FirebaseJWTMiddleware", package: "vapor-firebase-jwt-middleware")
             ],
             swiftSettings: [
                 // Enable better optimizations when building in Release configuration. Despite the use of
