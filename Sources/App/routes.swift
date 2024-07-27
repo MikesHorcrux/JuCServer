@@ -3,9 +3,9 @@ import Vapor
 import FirebaseJWTMiddleware
 
 func routes(_ app: Application) throws {
-    app.firebaseJwt.applicationIdentifier = "juc-just-you-but-corp"
-    let apiKey: String = "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"
-    let organization: String = "org-iyyujRkCm0DThRIaGIOYipko"
+    app.firebaseJwt.applicationIdentifier = firebase application
+    let apiKey: String = openai key
+    let organization: String = Openai org
     let openAIManager = OpenAIManager(apiKey: apiKey, organization: organization)
     let chatController = ChatController(openAIManager: openAIManager)
     
